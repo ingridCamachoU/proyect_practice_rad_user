@@ -60,7 +60,7 @@ const Nabvar = () => {
                 <span className='hr'></span>
 
                 <div className=" toogleDark">
-                    <img src={darkMode ? 
+                    <img className='icon_toogleDark' src={darkMode ? 
                     (sun) : (moon)} alt="Lightswitch on" onClick={handleClick}/>          
                 </div >
             </div>

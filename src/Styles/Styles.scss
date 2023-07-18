@@ -64,7 +64,7 @@
         .navbar{
             padding: 0;
             background: #4545f3;
-            padding: 13px;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             z-index: 1;
@@ -142,11 +142,10 @@
             .toogleDark{
                 border-radius: 50%;
                 padding-top: 5px;
-                width: 1.8em;
-                margin: 0 .3em;
+                width: 4em;
                 transition: 0.5s;
                 cursor: pointer;
-                img{
+                .icon_toogleDark{
                     width: 100%;
                     color: var(--btn-color-light);
                     padding: 0;
