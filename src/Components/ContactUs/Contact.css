@@ -1,0 +1,63 @@
+
+.section-info{
+    display: flex;
+    padding-top: 2em;
+}
+
+.setion-info-form{
+    width: 50%;
+    padding: 2em;
+    margin-left: 2em;
+}
+
+.form-Cont{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #B6B2B2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 1.5em 2em ;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+h2{
+    color: #2523A6;
+    font-weight: 600;
+}
+
+.btnEnviar{
+    background: #2523A6;
+    color:#FCFCFC ;
+    font-weight: 600;
+    width: 80px;
+    padding:  .2em .5em;
+    margin-bottom: 1em;
+}
+
+.setion-info-dat{
+    padding-top: 2em;
+}
+
+.contact-nformation{
+    padding: 1em;
+    color: #0B0976;
+}
+
+.contact-nformation h6{
+    font-weight: 600;
+}
+
+.section-ubi{
+    margin: 2em;
+    padding-left: 5em;
+}
+
+.section-ubi h2{
+    padding-bottom: 1em;
+}
+
+.schedule {
+    color: #040340;
+}
+

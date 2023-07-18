@@ -1,4 +1,4 @@
-import logoFooter from '../img/logoFooters.png';
+import logoFooter from '../assets/img/logoFooters.png';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {

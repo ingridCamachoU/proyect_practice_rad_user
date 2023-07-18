@@ -1,0 +1,21 @@
+
+.section-company{
+    padding: 2em 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-company img{
+    width: 90%;
+    padding-top: 1em;
+}
+
+.hr{
+    width: 25%;
+}
+
+.card_us{
+    display: flex;
+    margin: 1em;
+}
+

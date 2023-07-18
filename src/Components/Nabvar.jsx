@@ -1,9 +1,9 @@
-import logo from '../img/logo.jpeg';
+import logo from '../assets/img/logo.jpeg';
 import React, { useContext, useState } from 'react';
-import moon from '../img/Moons.png';
-import sun from '../img/Sun.png';
-import { DarkMode } from '../Context/DarkMode';
+import moon from '../assets/img/Moons.png';
+import sun from '../assets/img/Sun.png';
 import { Link } from "react-router-dom";
+import { DarkMode } from '../Context/DarkMode';
 
 const Nabvar = () => {
 
@@ -13,43 +13,37 @@ const Nabvar = () => {
         toggleDarkMode();
     };
 
-    const user= ()=>{
+    const [isOpenToggle, setOpenToggle] = useState(false);
+
+    const toggleMenu= ()=>{
         setOpenToggle(!isOpenToggle)
     };
 
-    const [isOpenToggle, setOpenToggle] = useState(false);
   return (
-        <nav className="navbar">
+        <div className="navbar">
+
             <div className="ContLogo">
                 <img className="img-fluid logo mx-2" src={logo} alt="Logo"/>
             </div>
 
-            <div className="menu">
-                <Link to='/Nabvar' className={darkMode ? `item dark` : `item light`}>Inicio</Link>
-                <Link to='/Us' className={darkMode ? `item dark` : `item light`}>Nosotros</Link>
-                <Link to='/Products' className={darkMode ? `item dark` : `item light`}>Productos</Link>
-                <Link to='/TechnicalService' className={darkMode ? `item dark` : `item light`}>Servicio Técnico</Link>
-                <Link to='/ContactUs' className={darkMode ? `item dark` : `item light`}>Contactenos</Link>    
-            </div>
-            
-            <div className="search" role="search">
+            <nav className={ `Cabecera-nav ${ isOpenToggle ? 'isActive' : '' }` }>
+                <ul className="Cabecera-ul">
+                    <li className="Cabecera-li"><Link to='/Home' className="Cabecera-a" onClick={ toggleMenu}>Inicio</Link></li>
+                    <li className="Cabecera-li"><Link to='/Us' className="Cabecera-a" onClick={ toggleMenu}>Nosotros</Link></li>
+                    <li className="Cabecera-li"><Link to='/Products' className="Cabecera-a" onClick={ toggleMenu}>Productos</Link></li>
+                    <li className="Cabecera-li"><Link to='/TechnicalService' className="Cabecera-a" onClick={ toggleMenu}>Servicio Técnico</Link></li>
+                    <li className="Cabecera-li"><Link to='/ContactUs' className="Cabecera-a" onClick={ toggleMenu}>Contáctanos</Link></li>
+                </ul>
+            </nav>
 
-                <div className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>
+            <div className="search">
+                <div className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={ toggleMenu}>
                     <span ></span>
                     <span ></span>
                     <span ></span>
-
-                    <div className={`nav-items ${isOpenToggle &&"openToggle" }`}>
-                    <Link to='/' className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>Inicio</Link>
-                    <Link to='/Us' className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>Nosotros</Link>
-                    <Link to='/Products' className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>Productos</Link>
-                    <Link to='/TechnicalService' className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>Servicio Técnico</Link>
-                    <Link to='/ContactUs' className={`toggler ${isOpenToggle &&"openToggle" }`} onClick={user}>Contactenos</Link>
-
-                    </div> 
                 </div>
-                
-                <span className='hr'></span>
+
+                <span className='hr quit'></span>
 
                 <ul className="icons">
                     <li>
@@ -69,9 +63,11 @@ const Nabvar = () => {
                     <img src={darkMode ? 
                     (sun) : (moon)} alt="Lightswitch on" onClick={handleClick}/>          
                 </div >
-            </div>             
-        </nav>
+            </div>
+
+        </div>
     );
 }
 
 export default Nabvar;
+

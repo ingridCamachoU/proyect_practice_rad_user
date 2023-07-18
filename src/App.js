@@ -6,10 +6,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Nabvar from "./Components/Nabvar";
 import Footer from "./Components/Footer";
 import { Routes, Route } from 'react-router-dom';
-import Us from "./Components/Us";
-import Products from "./Components/Products";
-import ContactUs from "./Components/ContactUs";
-import TechnicalService from "./Components/TechnicalService";
+import Us from "./Components/Us/Us";
+import Products from "./Components/Products/Products";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import TechnicalService from "./Components/TechnicalService/TechnicalService";
+import Home from "./Components/Home";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             </header>
             <div className={darkMode ? `container-xxl dark` : `container-xxl light`}>
                 <Routes>
+                    <Route path="/home" element={<Home/>} />
                     <Route path="/Us" element={<Us/>} />
                     <Route path="/Products" element={<Products/>} />
                     <Route path="/TechnicalService" element={<TechnicalService/>} />
