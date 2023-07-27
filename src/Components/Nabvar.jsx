@@ -23,7 +23,7 @@ const Nabvar = () => {
         <div className="navbar">
 
             <div className="ContLogo">
-                <img className="img-fluid logo mx-2" src={logo} alt="Logo"/>
+                <li className='list-unstyled'><Link to='/Home'><img className="img-fluid logo mx-2" src={logo} alt="Logo"/></Link></li>  
             </div>
 
             <nav className={ `Cabecera-nav ${ isOpenToggle ? 'isActive' : '' }` }>

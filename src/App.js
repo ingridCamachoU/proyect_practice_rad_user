@@ -10,7 +10,7 @@ import Us from "./Components/Us/Us";
 import Products from "./Components/Products/Products";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import TechnicalService from "./Components/TechnicalService/TechnicalService";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 
 function App() {
 
