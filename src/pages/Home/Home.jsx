@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import encabezado  from '../../assets/img/encabezado.png';
 import { DarkMode } from '../../Context/DarkMode';
 import './Home.css';
+import React from 'react';
 
 const Home = () => {
 

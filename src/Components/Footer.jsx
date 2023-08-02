@@ -1,5 +1,6 @@
 import logoFooter from '../assets/img/logoFooters.png';
 import { animateScroll as scroll } from 'react-scroll';
+import React from 'react';
 
 const Footer = () => {
 

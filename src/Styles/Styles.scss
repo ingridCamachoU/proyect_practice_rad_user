@@ -63,8 +63,8 @@
 
         .navbar{
             padding: 0;
-            background: #303080;
-            padding: 10px;
+            background: #2f41b4;
+            padding: 13px;
             display: flex;
             justify-content: space-between;
             z-index: 1;
@@ -78,7 +78,7 @@
                 border: 1px solid #F7F7F7;
                 background: #F7F7F7;
                 .logo{
-                    width: 90px;
+                    width: 100px;
                 }
             }
 
@@ -140,7 +140,6 @@
             }
 
             .toogleDark{
-                border-radius: 50%;
                 padding-top: 5px;
                 width: 4em;
                 transition: 0.5s;
@@ -150,6 +149,10 @@
                     color: var(--btn-color-light);
                     padding: 0;
                 }
+                &:hover{
+                    border: 1px solid rgb(75, 171, 223);
+                    border-radius: 50px;
+                }
             }
         }
     }
@@ -158,14 +161,14 @@
         position: fixed;
         left: 0px;
         bottom: 0px;
-        background: #e2e2e2f6;
+        background: #222328;
         padding: 1em;
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         p{
-            color: #373737;
+            color: #FFFFFF;
             flex-wrap: wrap;
         }
     
@@ -178,10 +181,10 @@
             a{
                 text-decoration: none;
                 margin-right: 15px;
-                color: #373737;
+                color: #FFFFFF;
                 cursor: pointer;
                 i{
-                    color: #373737;
+                    color: #FFFFFF;
                     font-size: 1.5em;
                 }
             }
@@ -302,6 +305,7 @@
     height: 100px;
     justify-content: space-between;
     padding: 2em;
+    flex-wrap: wrap;
 }
 
 .title{
@@ -331,6 +335,9 @@
         header{
             .navbar{
                 padding: 0;
+                .toogleDark{
+                    width: 5em;
+                }
                 .Cabecera-nav{
                     width:100%;
                     display: grid;
@@ -430,8 +437,6 @@
             margin-bottom: 8em;
         }
     }
-   
-  
 }
 
 
@@ -468,33 +473,36 @@
             padding-bottom: 50px;
             display: block;
             .ContLogo{
-                margin-left: 15%;
-                padding:0;
+                padding: 0;
+                .logo{
+                    width: 80px;
+                    margin: 0;
+                }
             }
             .search{
                 width: 100%;
-                justify-content:space-between;
-                padding-left: 10px;
+                justify-content:end;
+                right: 5px;
                 margin: 0;
-                .icons{
-                    margin-left: 100px;
-                }
                 .toogleDark{
                     margin-top: 5px;
+                    width: 2em;
                     padding:0;
                 }
                 .hr {
-                    &.quit{
-                        display: none;
-                    }
+                    display: none;
                 } 
+                .toggler{
+                    margin: 0;
+                    padding-top: 7px;
+                }
             }
         }
     }
+}
 
-    .toggler{
-        padding-left: 10px;
-    } 
+@media(max-width:328px){
+
 }
 
 @media(max-width:280px){
@@ -502,7 +510,12 @@
     .body{
         header{
             .navbar{
-
+                .ContLogo{
+                    .logo{
+                        width: 80px;
+                        margin: 0;
+                    }
+                }
                 .Cabecera-nav{
                     .Cabecera-ul{
                         display: block;
@@ -514,31 +527,8 @@
                         padding-bottom: 0.3em;
                     }
                 }
-                .ContLogo{
-                    margin-left: 15%;
-                    .logo{
-                        width: 80px;
-                        margin: 0;
-                    }
-                }
-                .search{
-                    .icons{
-                        margin-left: 75px;
-                        .fa-magnifying-glass{
-                            display: none;
-                        }
-                    }
-                    .hr {
-                        display: none;  
-                    } 
-                }
-                .toogleDark{
-                    padding: 0%;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                }
-            }
+            
         }
     }   
+}
 }

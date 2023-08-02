@@ -6,7 +6,7 @@ import radiador  from '../../assets/img/radiador.png';
 import mantenimiento  from '../../assets/img/mantenimiento.png';
 import asesoria  from '../../assets/img/asesoria.png';
 import cards  from '../../assets/img/cards.png';
-import Form from "../Form";
+import Form from "../../Components/Form";
 
 const TechnicalService = () => {
 

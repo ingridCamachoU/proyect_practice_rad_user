@@ -47,21 +47,19 @@ const Nabvar = () => {
 
                 <ul className="icons">
                     <li>
-                        <a href=""><i className="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
                     </li>
                     <li>
-                        <a href=""><i className="fa-solid fa-user"></i></a>
+                        <a href="#"><i className="fa-solid fa-user"></i></a>
                     </li>
                     <li>
-                        <a href=""><i className="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i className="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>  
-
                 <span className='hr'></span>
-
                 <div className=" toogleDark">
                     <img className='icon_toogleDark' src={darkMode ? 
-                    (sun) : (moon)} alt="Lightswitch on" onClick={handleClick}/>          
+                    (sun) : (moon)} onClick={handleClick}/>          
                 </div >
             </div>
 

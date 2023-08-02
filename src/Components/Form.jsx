@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useForm } from "../hooks/useForm";
+import Swal from 'sweetalert2';
+import React from 'react';
 
 const Form = () => {
 
@@ -54,9 +56,35 @@ const Form = () => {
         setErrors(err);      
 
         if (Object.keys(errors).length === 0){
-            setFormData(initialForm);
             setErrors('');
-            handleReset();
+        
+            fetch("https://formsubmit.co/ajax/injuca28@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Hola: 'RadCars',
+                    Recibiste_un_mensaje_de: formData.name,
+                    Con_email: formData.email,
+                    Numero_celular: `https://wa.me/${formData.phone}`,
+                    Mensaje: formData.message
+                })
+            })
+                .then(response =>response.json())
+                .then(data =>{ 
+                    console.log(data);
+                    data.success === 'true' && setFormData(initialForm);
+                    handleReset();
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Mensaje Enviado',
+                        showConfirmButton: false,
+                        timer: 1000
+                      })})
+                .catch(error => console.log(error));
         }
 
     };
@@ -110,7 +138,7 @@ const Form = () => {
                 value={formData.message}/>
                 {errors.message && <p className="text-danger">{errors.message}</p>}
 
-                <input type="submit"  value="Enviar" className=" btnEnviar"/>
+                <input className=" btnEnviar"type="submit" value="Enviar"/>
 
             </form>
         </>

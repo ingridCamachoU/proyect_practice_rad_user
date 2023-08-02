@@ -6,11 +6,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Nabvar from "./Components/Nabvar";
 import Footer from "./Components/Footer";
 import { Routes, Route } from 'react-router-dom';
-import Us from "./Components/Us/Us";
-import Products from "./Components/Products/Products";
-import ContactUs from "./Components/ContactUs/ContactUs";
-import TechnicalService from "./Components/TechnicalService/TechnicalService";
-import Home from "./Components/Home/Home";
+import Us from "./pages/Us/Us";
+import Products from "./pages/Products/Products";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import TechnicalService from "./pages/TechnicalService/TechnicalService";
+import Home from "./pages/Home/Home";
 
 function App() {
 

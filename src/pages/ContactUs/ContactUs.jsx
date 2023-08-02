@@ -3,7 +3,7 @@ import {DarkMode} from "../../Context/DarkMode"
 import { Link } from "react-router-dom";
 import './Contact.css';
 import men  from '../../assets/img/men.png';
-import Form from "../Form";
+import Form from "../../Components/Form";
 
 const ContactUs = () => {
 
